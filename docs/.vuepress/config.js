@@ -1,5 +1,6 @@
 module.exports = {
-  plugins: ["@vuepress/back-to-top"], //此处是添加返回顶部的插件
+  // plugins: ["@vuepress/back-to-top"], //此处是添加返回顶部的插件
+  plugins: ["demo-container"], // demo-container 是个插件
   title: "前端开发知识整理",
   base: "/",
   themeConfig: {
@@ -15,8 +16,8 @@ module.exports = {
             text: "此为下拉",
             link: "/",
             items: [
-              { text: "base", link: "/html/base" },
-              { text: "topic", link: "/html/topic" },
+              { text: "aa", link: "/demo/aa" },
+              { text: "bb", link: "/demo/bb" },
             ],
           },
         ],
@@ -33,19 +34,15 @@ module.exports = {
         sidebarDepth: 1, // 可选的, 默认值是 1
       },
       {
-        title: "HTML",
+        title: "DEMO",
         path: "",
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 4, // 可选的, 默认值是 1
         children: [
-          {
-            title: "HTML基础知识",
-            path: "/html/base",
-          },
-          {
-            title: "HTML面试题",
-            path: "/html/topic",
-          },
+          { title: "test-aa", path: "/demo/aa" },
+          { title: "test-bb", path: "/demo/bb" },
+          { title: "test-demo-container", path: "/demo/test-demo-container" },
+          { title: "test-自定义模板", path: "/demo/myself-template" },
         ],
       },
       // {
@@ -63,56 +60,6 @@ module.exports = {
       //       path: "/css/topic",
       //     },
       //   ],
-      // },
-      // {
-      //   title: "Javascript",
-      //   path: "",
-      //   collapsable: true, // 可选的, 默认值是 true,
-      //   sidebarDepth: 4, // 可选的, 默认值是 1
-      //   children: [
-      //     {
-      //       title: "Javascript基础知识",
-      //       path: "/javascript/base",
-      //     },
-      //     {
-      //       title: "Javascript面试题",
-      //       path: "/javascript/topic",
-      //     },
-      //     {
-      //       title: "Javascript面试题_001",
-      //       path: "/javascript/topic_001",
-      //     },
-      //     {
-      //       title: "Javascript笔试题_002",
-      //       path: "/javascript/topic_002",
-      //     },
-      //     {
-      //       title: "JavaScript 实用工具函数",
-      //       path: "/javascript/toolFn",
-      //     },
-      //   ],
-      // },
-      // {
-      //   title: "VUE",
-      //   path: "",
-      //   collapsable: true, // 可选的, 默认值是 true,
-      //   sidebarDepth: 1, // 可选的, 默认值是 1
-      //   children: [
-      //     {
-      //       title: "vue基础知识",
-      //       path: "/vue/base",
-      //     },
-      //     {
-      //       title: "vue面试题",
-      //       path: "/vue/topic",
-      //     },
-      //   ],
-      // },
-      // {
-      //   title: "学习资源",
-      //   path: "/sites/",
-      //   collapsable: true, // 可选的, 默认值是 true,
-      //   sidebarDepth: 1, // 可选的, 默认值是 1
       // },
     ],
   },
