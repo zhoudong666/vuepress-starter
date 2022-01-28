@@ -1,3 +1,5 @@
+const path = require("path");
+const resolve = (dir) => path.join(__dirname, dir);
 module.exports = {
   // plugins: ["@vuepress/back-to-top"], //此处是添加返回顶部的插件
   plugins: ["demo-container"], // demo-container 是个插件
@@ -39,6 +41,7 @@ module.exports = {
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 4, // 可选的, 默认值是 1
         children: [
+          { title: "内置样式等", path: "/demo/内置样式等" },
           { title: "test-aa", path: "/demo/aa" },
           { title: "test-bb", path: "/demo/bb" },
           { title: "test-demo-container", path: "/demo/test-demo-container" },
@@ -62,5 +65,8 @@ module.exports = {
       //   ],
       // },
     ],
+  },
+  chainWebpack: (config) => {
+    config.resolve.alias.set("@", resolve("/src"));
   },
 };

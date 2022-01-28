@@ -5,6 +5,9 @@
   <div class="red-center-text">
     <p>{{ message }}</p>
     <input v-model="message" placeholder="Input something..." />
+    <div>{{num}}</div>
+
+    <button @click="add">add 1</button>
   </div>
 </template>
 <script>
@@ -12,7 +15,13 @@
     data() {
       return {
         message: "Hello Vue",
+        num: 0,
       };
+    },
+    methods: {
+      add() {
+        this.num += 1;
+      },
     },
   };
 </script>
@@ -25,3 +34,18 @@
 ```
 
 :::
+
+::: tip
+=========================== 华丽分割线 ===========================
+:::
+
+### Badge <Badge text="beta" type="warning"/> <Badge text="默认主题"/>
+
+<test-component/>
+
+可展开与收起 代码
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/TestComponent.vue
+:::
+
+<<< @/docs/.vuepress/components/TestComponent.vue
