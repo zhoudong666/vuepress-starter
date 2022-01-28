@@ -2,7 +2,7 @@ const path = require("path");
 const resolve = (dir) => path.join(__dirname, dir);
 module.exports = {
   // plugins: ["@vuepress/back-to-top"], //此处是添加返回顶部的插件
-  plugins: ["demo-container"], // demo-container 是个插件
+  plugins: ["demo-container", "@vuepress/back-to-top"], // demo-container 是个插件
   title: "前端开发知识整理",
   base: "/",
   themeConfig: {
@@ -67,6 +67,12 @@ module.exports = {
     ],
   },
   chainWebpack: (config) => {
-    config.resolve.alias.set("@", resolve("/src"));
+    config.resolve.alias.set(
+      "@components",
+      resolve("src/docs/.vuepress/components/")
+    );
+  },
+  markdown: {
+    lineNumbers: true,
   },
 };

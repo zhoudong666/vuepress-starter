@@ -39,8 +39,6 @@
 =========================== 华丽分割线 ===========================
 :::
 
-### Badge <Badge text="beta" type="warning"/> <Badge text="默认主题"/>
-
 <test-component/>
 
 可展开与收起 代码

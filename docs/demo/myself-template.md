@@ -1,18 +1,18 @@
 <custom-demo-block>
-
+ 
+<!-- render-description:xxx:render-description -->
   <div slot="description">
-    <!--render-description:xxx:render-description-->
     1-description description
   </div>
 
+<!-- render-demo:xxx:render-demo -->
   <template slot="demo">
-    <!--render-demo:xxx:render-demo-->
     2- 引用的组件标签
     <hello-world></hello-world>
   </template>
 
+<!-- render-source:xxx:render-source -->
 <template slot="source">
-    <!--render-source:xxx:render-source-->
     
 ```html
 <template>
